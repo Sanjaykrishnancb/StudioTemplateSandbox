@@ -100,8 +100,31 @@
       "bookingStatus": "CONFIRMED",
       "notes": "Bring two garment changes, steamer required.",
       "createdAt": "2026-10-18T18:59:36.488Z"
+    },
+    {
+      "id": "CMS-2026-9319",
+      "customerName": "San",
+      "phone": "9999999999",
+      "email": "test@test.com",
+      "date": "2026-10-20",
+      "startHour": 10,
+      "endHour": 12,
+      "startTime": "10:00 AM",
+      "endTime": "12:00 PM",
+      "duration": 2,
+      "guests": 2,
+      "purpose": "Content Shoot / Reels",
+      "addOns": [],
+      "addOnsTotal": 0,
+      "hourlyRate": 999,
+      "subtotal": 1998,
+      "totalAmount": 1998,
+      "paymentStatus": "PENDING",
+      "bookingStatus": "CONFIRMED",
+      "notes": "",
+      "createdAt": "2026-10-18T19:13:10.488Z"
     }
   ],
   "contacts": [],
-  "lastUpdated": "2026-10-18T18:59:36.488Z"
+  "lastUpdated": "2026-10-18T19:13:10.489Z"
 }
