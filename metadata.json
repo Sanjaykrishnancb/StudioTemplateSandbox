@@ -1,0 +1,6 @@
+{
+  "name": "Content Munch Studio",
+  "description": "Premium professional content creation, video & podcast studio in Chennai from ₹999/hour at Velachery Junction, Madipakkam.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

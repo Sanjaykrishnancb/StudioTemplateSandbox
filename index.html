@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Safeguard for environments where Window.prototype.fetch has only a getter
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          var _currentFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _currentFetch;
+            },
+            set: function(fn) {
+              _currentFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          try {
+            var proto = Object.getPrototypeOf(window);
+            if (proto && proto.fetch) {
+              var _protoFetch = proto.fetch;
+              Object.defineProperty(proto, 'fetch', {
+                get: function() { return _protoFetch; },
+                set: function(fn) { _protoFetch = fn; },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          } catch (err) {}
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Munch Studio | Premium Creator & Video Studio in Chennai</title>
+    <meta name="description" content="Content Munch Studio is Chennai's premier ready-to-shoot content creation, podcast and video studio from ₹999/hour at Velachery Junction, Madipakkam. Equipped with Sony A7M4 4K, studio lights, teleprompter and multiple sets." />
+    <meta name="keywords" content="Content Munch Studio, Studio in Chennai, Content studio Chennai, Video studio Chennai, Podcast studio Chennai, Reels studio Chennai, Photography studio Chennai, Content creation studio Chennai, Studio rental Chennai, Studio near Velachery, Studio near Madipakkam" />
+    <meta name="author" content="Content Munch Studio" />
+    <meta name="theme-color" content="#0B0D10" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://contentmunchstudio.com/" />
+    <meta property="og:title" content="Content Munch Studio | Professional Creator Studio in Chennai" />
+    <meta property="og:description" content="Walk in. Set up. Shoot. Create. Chennai's dedicated studio for creators, podcasts, reels and brands starting at ₹999/hour." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Content Munch Studio | Professional Creator Studio in Chennai" />
+    <meta name="twitter:description" content="Professional content production space in Chennai from ₹999/hour at Velachery Junction, Madipakkam." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Preconnect to image CDN and Font CDN -->
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload Hero LCP Image for immediate mobile paint -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=75&w=640&auto=format&fit=crop"
+      fetchpriority="high"
+    />
+
+    <!-- Non-render-blocking Google Fonts with display: swap -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Syne:wght@700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Syne:wght@700;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Syne:wght@700;800&display=swap"
+      />
+    </noscript>
+
+    <!-- Schema.org LocalBusiness structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Content Munch Studio",
+      "image": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1200&auto=format&fit=crop",
+      "url": "https://contentmunchstudio.com/",
+      "telephone": "+919840000000",
+      "priceRange": "₹999/hour",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Velachery Junction, Madipakkam Main Road",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600091",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.9754,
+        "longitude": 80.2088
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "23:59"
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com/contentmunchstudio",
+        "https://youtube.com/@contentmunchstudio"
+      ]
+    }
+    </script>
+
+    <!-- Critical CSS for instant Frame 1 rendering (FCP < 0.8s) -->
+    <style>
+      :root {
+        --crit-bg: #0B0D10;
+        --crit-accent: #E59500;
+        --crit-text: #ECEFF1;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0B0D10;
+        color: #ECEFF1;
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .crit-shell-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        padding: 20px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1280px;
+        margin: 0 auto;
+        background: linear-gradient(to bottom, rgba(11,13,16,0.95), transparent);
+        box-sizing: border-box;
+      }
+      .crit-shell-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: white;
+      }
+      .crit-shell-badge {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #E59500, #FF6B35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        color: black;
+        font-size: 18px;
+        letter-spacing: 0.05em;
+      }
+      .crit-shell-hero {
+        min-height: 100vh;
+        padding-top: 130px;
+        padding-bottom: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+        max-width: 1280px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      .crit-shell-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: 9999px;
+        background: rgba(18, 21, 27, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 24px;
+      }
+      .crit-shell-h1 {
+        font-size: clamp(2.4rem, 7.5vw, 5.2rem);
+        font-weight: 900;
+        line-height: 0.98;
+        text-transform: uppercase;
+        margin: 0 0 24px 0;
+        letter-spacing: -0.02em;
+        color: white;
+      }
+      .crit-shell-grad {
+        display: block;
+        background: linear-gradient(90deg, #E59500, #FFA928, #FF8042);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .crit-shell-sub {
+        font-size: 18px;
+        line-height: 1.55;
+        color: #CBD5E1;
+        max-width: 580px;
+        margin: 0 0 32px 0;
+      }
+      .crit-shell-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 32px;
+        border-radius: 12px;
+        background: #E59500;
+        color: #000;
+        font-weight: 900;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-decoration: none;
+        box-shadow: 0 10px 25px -5px rgba(229, 149, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body class="bg-[#0B0D10] text-[#ECEFF1] antialiased selection:bg-[#E59500] selection:text-black">
+    <div id="root">
+      <!-- Instant Critical Render Shell: Provides instant FCP and LCP before JS evaluates -->
+      <header class="crit-shell-header">
+        <a href="#home" class="crit-shell-logo">
+          <div class="crit-shell-badge">CM</div>
+          <div style="display:flex; flex-direction:column; text-align:left;">
+            <span style="font-weight:800; font-size:16px; line-height:1.2; text-transform:uppercase; color:#fff;">CONTENT MUNCH</span>
+            <span style="font-size:10px; letter-spacing:0.25em; color:#E59500; font-weight:700; text-transform:uppercase;">STUDIO · CHENNAI</span>
+          </div>
+        </a>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <a href="#book-now" class="crit-shell-btn" style="padding:10px 20px; font-size:12px;">BOOK</a>
+        </div>
+      </header>
+
+      <main class="crit-shell-hero">
+        <div class="crit-shell-tag">
+          <span style="color:#E59500;">📍 Velachery Junction, Chennai</span>
+          <span style="color:#64748B;">·</span>
+          <span>Chennai's Creator Hub</span>
+          <span style="color:#64748B;">·</span>
+          <span style="color:#34D399; font-weight:800;">From ₹999/Hour</span>
+        </div>
+
+        <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl xl:text-[5.2rem] font-black text-white tracking-tight leading-[0.98] uppercase crit-shell-h1">
+          Your Content.
+          <span class="crit-shell-grad block text-transparent bg-clip-text bg-gradient-to-r from-[#E59500] via-[#FFA928] to-[#FF8042]">Your Studio.</span>
+          <span class="block">Your Way.</span>
+        </h1>
+
+        <p class="crit-shell-sub">
+          Chennai's dedicated production studio for creators, podcasts, reels, and video shoots. Walk in. Set up. Shoot. Create.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:center;">
+          <a href="#book-now" class="crit-shell-btn">BOOK YOUR SESSION ↗</a>
+          <a href="#studio" style="display:inline-flex; align-items:center; justify-content:center; padding:16px 28px; border-radius:12px; border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.05); color:#fff; font-weight:700; font-size:14px; text-transform:uppercase; text-decoration:none;">EXPLORE THE STUDIO</a>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
