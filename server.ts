@@ -3,11 +3,17 @@ import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 import { dbManager, DatabaseBooking } from "./src/server/db.ts";
+import Razorpay from "razorpay";
 
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+const razorpay = process.env.RAZORPAY_KEY_ID ? new Razorpay({
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_KEY_SECRET || "",
+}) : null;
 
 function formatHour(hour: number): string {
   const normalized = hour % 24;
@@ -31,6 +37,25 @@ async function startServer() {
       database: "Persistent JSON Database Active",
       stats: dbManager.getStats(),
     });
+  });
+
+  // Razorpay order creation
+  app.post("/api/create-order", async (req: Request, res: Response) => {
+    if (!razorpay) {
+      return res.status(500).json({ error: "Razorpay not configured" });
+    }
+    const { amount, currency = "INR" } = req.body;
+    try {
+      const order = await razorpay.orders.create({
+        amount: amount * 100, // Amount in paise
+        currency,
+        receipt: `receipt_${Date.now()}`,
+      });
+      res.json(order);
+    } catch (error) {
+      console.error("Razorpay order creation failed:", error);
+      res.status(500).json({ error: "Failed to create payment order" });
+    }
   });
 
   // Slot availability check endpoint
